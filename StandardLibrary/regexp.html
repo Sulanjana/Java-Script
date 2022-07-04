@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+<body>
+    <script>
+    {
+        // create regexp
+        const regex1= /jasu/;
+        const regex2= new RegExp("jasu");
+        const regex3= new RegExp(/jasu/);
+    }
+    {
+        // test regex
+        const coba="reza sulanjana purnama purnama sulanjana reza";
+
+        const regex=/purnama/;
+
+        let print=regex.exec(coba);
+        console.info(print);
+
+        let ada=regex.test(coba);
+        console.info(ada);
+    }
+
+    {
+        // regex modifier
+        const jenengan="jasu reza\njagu Sulanjana purnama\nsulanjana Jasu\n purnama reza";
+        const regex1=/^j..u/igm
+        const regex2=/sulanjana/ig
+
+        let hasil;
+        while((hasil=regex1.exec(jenengan))!==null){
+            console.info(hasil);
+        }
+
+        while((hasil=regex2.exec(jenengan))!==null){
+            console.info(hasil);
+        }
+    }
+    {
+        // advanced regex
+        const regex=/rez[aiueo]/ig;
+
+        const kata="reza rezi rezu rezo reza reze";
+
+        let muncul;
+
+        while ((muncul=regex.exec(kata))!==null) {
+            console.info(muncul);
+        }
+    }
+    {
+        const kata="reza rezi reka resa rezu rezo reza reze";
+        console.info(kata.match(/rez[aiueo]/ig));
+        console.info(kata.search(/rez[aiueo]/ig));
+        console.info(kata.replace(/rez[aiueo]/i,"wawa"));
+        console.info(kata.replaceAll(/rez[aiueo]/ig,"waw"));
+        console.info(kata.split(/r/ig));
+    }
+    </script>
+</body>
+</html>

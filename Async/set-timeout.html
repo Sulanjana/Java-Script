@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timout</title>
+</head>
+<body>
+    <div id="di"></div>
+    <script>
+        function tambhakan(){
+        const bobo=document.createElement("h1");
+        bobo.textContent="Selamat Datang";
+        const di=document.getElementById("di");
+        di.appendChild(bobo);
+
+        }
+
+        setTimeout(tambhakan,5000);
+        
+    </script>
+</body>
+</html>

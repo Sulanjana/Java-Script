@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Await</title>
+</head>
+<body>
+    <script>
+        function ambilProduk(){
+            const req = new Request("api/produk.json",{
+                method:"GET"
+            });
+            const respon = fetch(req);
+            return respon.then((respon)=>respon.json());
+        }
+
+        function ambilProdukPromise(){
+            return new Promise(function(resolve,reject){
+                ambilProduk()
+                .then((produk)=>resolve(produk.Tipe))
+                .catch((error)=>reject(error))
+            })
+        }
+
+        async function ambilProdukAsync(){
+           try {
+            const produk = await ambilProduk();
+            return produk.Tipe;
+            
+           } catch (error) {
+            return "produk tidak ditemukan"
+            
+           }
+        }
+        
+        ambilProdukPromise()
+        .then((produkTipe)=>console.info(produkTipe));
+        ambilProdukAsync()
+        .then((produkTipe)=>console.info(produkTipe));
+    </script>
+</body>
+</html>

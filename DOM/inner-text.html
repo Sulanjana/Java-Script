@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Text</title>
+</head>
+<body>
+    <p id="pi">
+        <script>
+            console.info("Hello Wrong");
+        </script>
+        <b>Reza</b> Sulanjana <i>Purnama</i>
+    </p>
+    <script>
+        const pi=document.getElementById("pi");
+        console.info(pi.textContent);
+        console.info(pi.innerText);
+        console.info(pi.innerHTML);
+    </script>
+</body>
+</html>

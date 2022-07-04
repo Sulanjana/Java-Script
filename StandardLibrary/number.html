@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        const angka = "1234567";
+        const angkaa = Number(angka);
+        console.info(typeof angka);
+        console.info(typeof angkaa);
+        console.info(angka);
+        console.info(Number("hahay"));
+
+        console.info(Number.MAX_VALUE);
+        console.info(Number.MIN_VALUE);
+        console.info(Number.MAX_SAFE_INTEGER);
+        console.info(Number.MIN_SAFE_INTEGER);
+
+        const kumpulan=Number("124897");
+        console.info(Number.isInteger(kumpulan));
+        console.info(Number.isNaN(kumpulan));
+
+        const bukanhuruf=Number(110000);
+        console.info(bukanhuruf.toString());
+        console.info(bukanhuruf.toLocaleString("id-ID"));
+    </script>
+</body>
+</html>

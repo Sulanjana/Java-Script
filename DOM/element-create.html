@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Create</title>
+</head>
+<body>
+    <div id="yes" class="yes"></div>
+    <script>
+        const yes= document.getElementById("yes");
+
+        const coba= document.createElement("h1");
+        coba.textContent="Hallo Selamat Datang";
+        yes.appendChild(coba);
+
+        const cobaa= document.createElement("h2");
+        cobaa.textContent="di website kami";
+        yes.appendChild(cobaa);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflect</title>
+</head>
+<body>
+    <script>
+        const nama={};
+        Reflect.set(nama, "depan", "reza");
+        Reflect.set(nama, "tengah", "sulan");
+
+        console.info(nama);
+
+        console.info(Reflect.has(nama,'depan'));
+        console.info(Reflect.has(nama,'tengah'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+    {
+        // date
+        const date=new Date();
+        console.info(date);
+
+        const date2=new Date(1999,12,12);
+        console.info(date2);
+
+        const date3=new Date(1999,12,12,6,50,58,990);
+        console.info(date3);
+
+        const date4=new Date(1655089614255);
+        console.info(date4);
+    }
+    {
+        // epoch & unix timestamp
+        const date=new Date();
+        console.info(date.getTime());
+
+        const date2=new Date(1999,12,12);
+        console.info(date2.getTime());
+
+        const date3=new Date(1999,12,12,6,50,58,990);
+        console.info(date3.getTime());
+
+        const date4=new Date(1655089614255);
+        console.info(date4.getTime());
+
+        console.info(Date.now());
+    }
+    {
+        // parsing 
+
+        const waktu = Date.parse("2020-02-02T21:21:21.500+07:00");
+        console.info(waktu);
+        const cek=new Date(1580653281500);
+        console.info(cek);
+    }
+    {
+        // set & get
+
+        const time= new Date(); 
+
+
+        console.info(time.getFullYear());
+        console.info(time.getMonth());
+        console.info(time.getDate());
+        console.info(time.getHours());
+        console.info(time.getMinutes());
+        console.info(time.getSeconds());
+        console.info(time.getMilliseconds());
+        console.info(time.getTimezoneOffset());
+    }
+    </script>
+</body>
+</html>

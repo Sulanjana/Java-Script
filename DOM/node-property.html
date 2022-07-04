@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+    <ul id="kumpulan">
+        <li id="satu">Satu</li>
+        <li id="dua">Dua</li>
+        <li id="tiga">Tiga</li> 
+    </ul>
+    <script>
+        const caku=document.getElementById("kumpulan");
+        console.info(caku);
+        console.info(caku.childNodes);
+        const caang=document.getElementById("dua");
+        console.info(caang);
+        console.info(caang.previousSibling.previousSibling);
+        console.info(caang.nextSibling.nextSibling);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Constructor</title>
+</head>
+<body>
+    <script>
+        class Karyawan{
+            constructor(name){
+                this.name=name;
+            }
+            wawan(name){
+                console.info(`Hallo ${name} Perkenalkan Saya ${this.name}`);
+            }
+        }
+        class Bos extends Karyawan{
+            constructor(name,namee){
+                super(name);
+                this.namee=namee;
+            }
+            oos(name){
+                console.info(`Hallo ${name} Perkenalkan Saya ${this.name} ${this.namee}`);
+            }
+        }
+
+        karyawan = new Karyawan("Atasan");
+        karyawan.wawan("Wan");
+        console.info(karyawan);
+
+        
+        bos = new Bos("Atasan","Bawahan");
+        bos.oos("OS");
+        console.info(bos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        const map = new Map();
+        map.set("Nama","Reza");
+        map.set("Asal","Bandung");
+
+        console.info(map.get("Nama"));
+        console.info(map.get("Asal"));
+
+        for (const iterator of map) {
+            console.info(`${iterator[0]} : ${iterator[1]}`);
+        }
+
+        map.forEach((value,key)=>console.info(`${key} : ${value}`));    
+    </script>
+</body>
+</html>

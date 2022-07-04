@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        {
+            // array loop
+            const ahay=["Reza","Sulanjana","Purnama"];
+
+            ahay.forEach(function (value,index){
+                console.info(`Index Ke ${index} adalah ${value}`);
+            });
+
+            ahay.forEach((value,index)=>console.info(`Index ke ${index} adalah ${value}`))
+
+            ahay.forEach((value)=>console.info(value))
+        }
+        {
+            // array queue
+            const queue=[];
+
+            queue.push("Reza");
+            queue.push("Sulanjana");
+            queue.push("Purnama");
+            
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue.shift())
+            console.info(queue.shift())
+        }
+        {
+            // arrau stack
+            const stack=[];
+
+            stack.push("Reza");
+            stack.push("Sulanjana");
+            stack.push("Purnama");
+            
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop())
+            console.info(stack.pop())
+        }
+
+        {
+            // array search
+            const ambil=[1,2,3,4,5,1,2,3,4,5];
+
+            console.info(ambil.find(value=>value>3));//4
+            console.info(ambil.findIndex(value=>value>3));//3
+            console.info(ambil.includes(10)); //false
+            console.info(ambil.indexOf(5)); //4
+            console.info(ambil.lastIndexOf(5));
+        }
+        {
+            // array filter
+            const angka=[1,23,4,4,56,7,8,6,8,9,10,1,2,3,4,5,6,7,8,9,10];
+
+            console.info(angka.filter(value=>value%2===1));
+            console.info(angka.filter(value=>value%2===0));
+        }
+        {
+            const nama=["Reza","Sulanjana","Purnama"];
+            const besar= nama.map(value=>value.toUpperCase());
+
+            console.info(besar);
+
+            const gabung=nama.reduce((before,value)=>before + " " + value);
+            console.log(gabung);
+
+            const gabungRight=nama.reduceRight((before,value)=>before + " " + value);
+            console.log(gabungRight);
+
+            const jumlah=[13,4,154,151,51,51,515,1];
+            const jumlahh=jumlah.reduce((before,value)=>before + value);
+            console.log(jumlahh);
+
+        }
+
+
+
+    </script>
+</body>
+</html>

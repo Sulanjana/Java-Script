@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+</head>
+<body>
+    <input type="button" value="Red">
+    <input type="button" value="Blue">
+    <input type="button" value="Green">
+    <div id="warn" style="width: 500px; height: 500px; background-color: black;">
+        
+    </div>
+    <script>
+        const warn=document.getElementById("warn");
+        const bati=document.querySelectorAll("input");
+
+        for (const button of bati) {
+            button.onclick=function(){
+                warn.style.backgroundColor = button.getAttribute("value");
+            }
+            
+        }
+        console.info(bati);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    <script>
+        const namaDepan=Symbol("namaDepan");
+        const namaTengah=Symbol("namaTengah");
+        const namaAkhir=Symbol("namaAkhir");
+
+        const kumpul={}
+        kumpul[namaDepan]="Reza";
+        kumpul[namaTengah]="Sulanjana";
+        kumpul[namaAkhir]="Purnama";
+
+        console.info(kumpul);
+        console.info(kumpul[namaDepan]);
+        console.info(kumpul[namaTengah]);
+        console.info(kumpul[namaAkhir]);
+
+
+        const nama={};
+        nama[Symbol.for("Depan")]="Reza";
+        nama[Symbol.for("Tengah")]="Sulanjana";
+        nama[Symbol.for("Akhir")]="Purnama";
+
+        console.info(nama[Symbol.for("Depan")]);
+        console.info(nama[Symbol.for("Tengah")]);
+        console.info(nama[Symbol.for("Akhir")]);
+        
+    </script>
+</body>
+</html>

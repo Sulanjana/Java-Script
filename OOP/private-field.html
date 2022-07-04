@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Class</title>
+</head>
+<body>
+    <script>
+        class Hitung{
+            #angka=0;
+
+            increment(){
+                this.#angka++;
+            }
+            decrement(){
+                this.#angka--;
+            }
+            get(){
+                return this.#angka;
+            }
+        }
+
+        const hasil= new Hitung();
+        hasil.increment();
+        hasil.increment();
+        hasil.increment();
+        hasil.increment();
+        hasil.increment();
+
+        console.info(hasil.get());
+        console.info(hasil);
+        
+    </script>
+</body>
+</html>

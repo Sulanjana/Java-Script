@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method</title>
+</head>
+<body>
+    <script>
+        class awal{
+            awalb(){
+                console.info("Awal Banget");
+            }
+        }
+
+        class akhir extends awal{
+            akhirb(){
+                super.awalb();
+                console.info("Akhir Banget");
+            }
+        }
+
+        const hihir= new akhir();
+        
+        
+        hihir.akhirb(); 
+    </script>
+</body>
+</html>

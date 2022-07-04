@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <div id="di"></div>
+    <div id="lo"></div>
+    
+    <script>
+        const di=document.getElementById("di");
+        const lo=document.getElementById("lo");
+        const width=window.screen.width;
+        const height=window.screen.height;
+        const lokasi=window.location;
+
+        di.textContent=`Ukuran Lebar ${width} Ukuran Tinggi ${height}`;
+        lo.textContent=lokasi;
+
+    </script>
+</body>
+</html>

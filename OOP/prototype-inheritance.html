@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    <script>
+        function Prajurit(nama){
+            this.nama=nama;
+        }
+        function Kapten(nama){
+            this.nama=nama;
+        }
+
+        Kapten.prototype=Object.create(Prajurit.prototype);
+        
+        Prajurit.prototype.salam=function(nama){
+            console.info(`Salam ${nama} Saya Prajurit ${this.nama}`);
+        }
+
+        Kapten.prototype.salam=function(nama){
+            console.info(`Salam ${nama} Saya Kapten ${this.nama}`);
+        }
+
+        
+
+        prajurit=new Prajurit("Agus");
+
+        prajurit.salam("Ika");
+    </script>
+</body>
+</html>

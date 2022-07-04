@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <script>
+        class ValidationError extends Error{
+            constructor(message,field){
+                super(message);
+                this.field=field;
+            }
+        }
+        class Matematika{
+            static hitung(...angkanya){
+
+                if(angkanya.length===0){
+                    throw new ValidationError("Jumlah Angka Tidak Boleh Kosong","angkanya");
+                }
+                let hasil=0
+
+                for(const itung of angkanya){
+                    hasil+=itung;
+                }
+
+                return hasil;
+            }
+        }
+
+        try{
+            // const matematika= Matematika.hitung(12,14);
+            console.info(Matematika.hitung());
+        }
+        catch(error){
+            if(error instanceof ValidationError){
+                console.info(`Merupakan Error dari field ${error.field} dengan error ${error.message}`);
+
+            }
+            else{
+                console.info(`Terjadi Error ${error.message}`);
+            }
+            
+
+        }
+        finally{
+            console.info("Program Telah Selesai Dijalankan!!")
+        }
+        
+    </script>
+</body>
+</html>

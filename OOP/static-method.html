@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <script>
+        class Matematika{
+            static hitung(...angkanya){
+                let hasil=0
+
+                for(const itung of angkanya){
+                    hasil+=itung;
+                }
+
+                return hasil;
+            }
+        }
+
+        const matematika= Matematika.hitung(1,2,31,4,14,41,4);
+        console.info(matematika);
+    </script>
+</body>
+</html>

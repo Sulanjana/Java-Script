@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+    <script>
+        function bawahan(namanya){
+            this.namanya=namanya;
+            this.kenalan= function perkenalan(){
+                console.info(`hallo ${perkenalan} saya ${namanya}`);
+            }
+        }
+
+        function atasan(namanya,panggilannya){
+            bawahan.call(this,namanya);
+            this.panggilannya=panggilannya;
+        }
+
+        coba= new atasan("Hihi","Haha");
+        
+        console.info(coba);
+
+    </script>
+</body>
+</html>

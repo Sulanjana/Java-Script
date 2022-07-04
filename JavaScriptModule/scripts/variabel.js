@@ -1,0 +1,1 @@
+export const nama="Reza Sulanjana Purnama";

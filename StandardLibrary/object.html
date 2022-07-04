@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        {
+            // freeze dan seal
+            const nama={
+            depan:"Universitas",
+            tengah:"Islam",
+            belakang:"Negeri"
+        }
+
+        Object.freeze(nama); //tidak bisa diubah atau dihapus
+
+        Object.seal(nama); //bisa diubah tapi tidak bisa dihapus juga tidak bisa di tambahkan seperti nama.middleName("HAHA")
+
+        nama.depan="Univ";
+
+        delete nama.tengah;
+
+        console.info(nama);
+        }
+
+        {
+            // assign
+            const awal={
+            depan:"Awalan"
+        }
+
+        const akhir={
+            akhir:"Akhiran"
+        }
+
+        Object.assign(awal,akhir);
+        console.info(awal);
+        }
+    {
+        // value dan name
+        nama={
+            depan:"aduh",
+            belakang:"hahahahaha"
+        }
+
+        console.info(Object.values(nama));
+        console.info(Object.getOwnPropertyNames(nama));
+
+    }
+    </script>
+</body>
+</html>
