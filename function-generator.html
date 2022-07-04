@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Generator</title>
+</head>
+<body>
+    <script>
+        function*generator(){
+            yield "Reza";
+            yield "Sulanjana";
+            yield "Purnama";
+        }
+
+        const print=generator();
+        for(const name of print){
+            console.log(name);
+
+        }
+        // lazy
+        function*seratus(value){
+            for(let i=1;i<=value;i++)
+            if(i%2===1){
+                console.info(`Yield ${i}`);
+                yield i;
+
+            }
+
+        }
+        // eager
+        function seratusArray(value){
+            const result =[];
+            for(let i=1;i<=value;i++)
+            if(i%2===1){
+                console.info(`Yield ${i}`);
+                result.push(i);
+
+            }
+            return result;  
+
+        }
+
+        const hitung = seratus(100);
+        // for(const angka of hitung){
+        //     console.info(angka);
+        // }
+        console.info(hitung.next().value);
+        console.info(hitung.next().value);
+        console.info(hitung.next().value);
+        
+    </script>
+</body>
+</html>

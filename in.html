@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In</title>
+</head>
+<body>
+    <script>
+        let nama={
+            namaDepan:"Reza",
+            namaBelakang:"Purnama"
+        };
+
+        const ada = "namaDepan" in nama;
+        if("namaDepan" in nama){
+            alert(`Hallo ${nama.namaDepan}`);
+        }
+        else{
+            alert(`Hallo`)
+        }
+
+        const sekolah={
+            sd:"sukapura",
+            smp: undefined,
+            sma:"duaenam"
+        };
+
+        if("smp" in sekolah){
+            alert(`Hallo ${sekolah.smp}`);
+        }
+        else{
+            alert("Hai");
+        }
+
+        const keluarga=["Cemara", "Cendana", "Kalian", null];
+        const hasil= 2 in keluarga;
+        document.writeln(`${hasil}`);
+    </script>
+</body>
+</html>

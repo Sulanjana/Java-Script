@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Continue</title>
+</head>
+<body>
+    <script>
+        let ulang=1;
+        while(true){
+            document.writeln(`<p>Perulangan ke ${ulang}</p>`)
+            ulang++;
+
+            if(ulang>10){
+                break;
+            }
+        }
+
+        for(let ilang=0;ilang<100;ilang++){
+            if(ilang%2===0){
+                continue;
+            }
+            document.writeln(`Ini Angka Ganjil ${ilang}`);
+        }
+    
+    </script>
+</body>
+</html>

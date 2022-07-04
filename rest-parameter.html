@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        function kumpulan(orang,...banyak){
+            let jumlah=0;
+            for(const hasil of banyak){
+                jumlah+=hasil;
+            }
+            document.writeln(`${orang}${jumlah}`);
+        }
+        kumpulan("namanama",432,4342,23,13,32,43);
+
+        data=[21,21231,414,141,4];
+        kumpulan("data",...data);
+
+        function oldschool(){
+            let old=0;
+            for(const school of arguments){
+                old+=school;
+            }
+            document.writeln(`${old}`);
+        }
+        oldschool(132,13,414,11,15,51);
+    </script>
+</body>
+</html>

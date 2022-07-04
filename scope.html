@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // global scope
+        let angka=0;
+
+        // global scope
+        function huruf(){
+            angka++;
+
+            // local scope huruf
+        }
+        function alpa(){
+            // local scope alpa
+        }
+        huruf();
+        huruf();
+
+        document.writeln(`${angka}`)
+
+        function pertama(){
+            let angkapertama="Pertama";
+            function palingpertama(){
+                document.writeln(`${angkapertama}`);
+            }
+            palingpertama();
+            
+        }
+        function kedua(){
+            let angkakedua="Kedua";
+            // document.writeln(`${angkapertama}`); error
+        }
+
+        pertama()
+        kedua()
+
+        // document.writeln(`${angkapertama}`); error
+        
+    </script>
+</body>
+</html>

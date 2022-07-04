@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <script>
+        console.info(this);
+        function contoh(){
+            console.info(this);
+            function dalam(){
+                console.info(this);
+            }
+            dalam();
+        }
+
+        const lagi={
+            nama:"Reza",
+            lets:function(nama){
+                console.info(`Hallo ${nama} Perkenalkan saya ${this.nama}`);
+            }
+        }
+
+        lagi.lets("Sulan");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array String</title>
+</head>
+<body>
+    <script>
+        const identitas = {};
+        identitas["nama LENGKAP"]="Reza Sulanjana Purnama";
+        identitas["NIM"]=1177050096;
+        identitas["UNIV"]="UIN SUNAN GUNUNG DJATI BANDUNG";
+        console.table(identitas);
+
+        delete identitas["NIM"];
+        console.table(identitas);
+
+        const iden = {
+            "Nama Lengkap" : "Reza Sulanjana Purnana"
+            
+        };
+
+        console.table(iden);
+
+        console.info(`Nama Lengkap : ${identitas["nama LENGKAP"]}`);
+        console.info(`NIM : ${identitas.NIM}`);
+        console.info(`UNIV : ${identitas.UNIV}`);
+        
+    </script>
+</body>
+</html>

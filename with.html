@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        const lengkap={
+            namaDepan:"Reza",
+            namaTengah:"Sulanjana",
+            namaAkhir:"Purnama"
+        };
+        
+        console.info(lengkap.namaDepan);
+        console.info(lengkap.namaTengah);
+        console.info(lengkap.namaAkhir);
+
+        with (lengkap){
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaAkhir);
+        }
+
+    </script>
+</body>
+</html>

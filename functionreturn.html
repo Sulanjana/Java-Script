@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Value</title>
+</head>
+<body>
+    <script>
+        function halloKalian(nama,asal){
+            const kirim=(`${nama}${asal}`);
+            return kirim;
+
+        }
+        const tangkap=halloKalian("Reza","Bandung");
+        document.writeln(`${tangkap}`)
+        
+        function nilaiAkhir(nilai){
+            if(nilai>80){
+                return "A";
+            }
+            else if(nilai>70){
+                return "B";
+            }
+            else if (nilai>60){
+                return "C";
+            }
+            else{
+                return "D";
+            }
+
+        }
+        const Akhir=nilaiAkhir(80);
+        document.writeln(`${Akhir}`);
+
+        function temukan(cari,angka){
+            for(const ayo of cari){
+                if (ayo===angka){
+                    return true;
+                }
+            }
+            return false;
+        
+        }
+        
+        const yoo=temukan([21,13,41,51],51);
+        document.writeln(`${yoo}`);
+
+        // function carnam(tempat,asik){
+        //     for(ketemu in tempat){
+        //         if(ketemu===asik){
+        //             return true;
+        //         }
+
+        //     }
+        //     return false;
+        // }
+
+        // const asal={nama:"reza",tengah:"sulanjana",akhir:"purnama"};
+        // const dari="nama";
+
+        // const yes=carnam(asal,dari);
+        // document.writeln(`<p>${carnam}</p>`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        const nama=["Reza","Sulanjana","Purnama"];
+          
+        const namadepan=nama[0];
+        const namatengah=nama[1];
+        const namaakhir=nama[2];
+
+//         console.info(namadepan);
+//         console.info(namatengah);
+//         console.info(namaakhir);
+// // destructuring array
+//         const names=["Reza","Sulanjana","Purnama","Ahay","Yuhu"];
+//         const [namaDepan,namaTengah,namaAkhir,...lainnya]=names;
+//         console.info(namaDepan);
+//         console.info(namaTengah);
+//         console.info(namaAkhir);
+//         console.info(lainnya);
+
+        // objek
+{
+    const biodata={
+            nami:"Reza Sulanjana Purnama",
+            alamat:{
+                Kota:"Bandung",
+                Kecamatan:"Cibiru",
+                Jalan:"Manglayang"
+            },
+            status:"Belum Menikah",
+            hobby:"Olahraga"
+        }
+
+        const {nami,alamat:{Kota,Kecamatan,Jalan},status,...other}=biodata;
+        console.info(nami);
+        console.info(Kota);
+        console.info(Kecamatan);
+        console.info(Jalan);
+        console.info(status);
+        console.info(other);
+
+        
+}
+
+{
+    function lengkap({nama,kelas,nim,univ}){
+        console.info(nama);
+        console.info(kelas);
+        console.info(nim);
+        console.info(univ);
+    }
+
+    const data={
+        nama:"Reza",
+        kelas:"A",
+        nim:"11770500096",
+        univ:"UIN"
+    }
+    lengkap(data);
+
+    function penjumlahan([kesatu,kedua]){
+        return kesatu+kedua;
+    }
+
+    console.info(penjumlahan([2,3]));
+
+    
+}
+{
+    const naleng={
+        depan:"Reza",
+        tengah:"Sulanjana"
+    }
+
+    const {depan,tengah,belakang="Purnama"}=naleng;
+    console.info(depan);
+    console.info(tengah);
+    console.info(belakang);
+}
+{
+    const lengkpa=["Reza","Purnama"];
+    const [depan,belakang,tengah="Sulanjana"]=lengkpa;
+    console.info(depan);
+    console.info(tengah);
+    console.info(belakang);
+}
+{
+    const naleng={
+        depan:"Agus",
+        tengah:"Sulanjana"
+    }
+
+    const {depan:depanBanget,tengah:tengahBanget,belakang:belakangBanget="Purnama"}=naleng;
+    console.info(depanBanget);
+    console.info(tengahBanget);
+    console.info(belakangBanget);
+}
+
+
+
+
+    </script>
+</body>
+</html>
